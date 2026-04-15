@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  --color-bg: #0A0A0A;
+  --color-card: #141414;
+  --color-accent: #BFFF00;
+  --color-text-muted: #888888;
+  --color-border: #222222;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-white font-sans antialiased selection:bg-accent selection:text-black;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-black uppercase tracking-tighter;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .border-grid {
+    @apply border-border;
+  }
+  
+  .btn-primary {
+    @apply bg-accent text-black px-8 py-5 font-extrabold uppercase text-sm tracking-widest transition-all hover:opacity-90 active:scale-95 inline-block;
+  }
+
+  .btn-outline {
+    @apply border-2 border-accent text-accent px-8 py-5 font-extrabold uppercase text-sm tracking-widest transition-all hover:bg-accent hover:text-black active:scale-95 inline-block;
+  }
+}
